@@ -29,6 +29,28 @@ h2{
     color: #fff;
 }
 
+div#newitems dl dd.productname,
+div#pickup dl dd.productname {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+div#newitems ul li a.productlink,
+div#pickup ul li a.productlink {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #f9bc7f;
+    border: 2px solid #fff; 
+    line-height: 25px;
+    padding: 16px 79px;
+    margin: 0 84px 130px;
+}
+
 
 /* micro clearfix */
 .cf:before,
@@ -106,6 +128,7 @@ div#newitems {
 
 div#newitems h2 {
     margin: 80px 0 68px 93px;
+    float: left;
 }
 
 div#newitems ul {
@@ -128,24 +151,6 @@ div#newitems dl dt {
     margin-bottom: 28px;
 }
 
-div#newitems dl dd {
-    text-align: center;
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 22px;
-}
-div#newitems ul li a {
-    display: inline-block;
-    color: #fff;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: #f9bc7f;
-    border: 2px solid #fff; 
-    line-height: 25px;
-    padding: 16px 79px;
-    margin: 0 84px 130px;
-}
 
 
 /* ========================================
@@ -181,25 +186,6 @@ div#pickup dl dt {
     margin-bottom: 24px;
 }
 
-div#pickup dl dd {
-    text-align: center;
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 22px;
-}
-
-div#pickup ul li a {
-    display: inline-block;
-    color: #fff;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: #f9bc7f;
-    border: 2px solid #fff; 
-    line-height: 25px;
-    padding: 16px 79px;
-    margin: 0 84px 130px;
-}
 
 
 /* ========================================
