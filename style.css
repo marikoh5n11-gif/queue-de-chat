@@ -73,21 +73,23 @@ header {
 }
 
 header h1 {
-    float: left;
     font-size: 48px;
     font-weight: bold;
     position: absolute;
     top: 28px;
     left: 30px;
+    color: #333;
 }
 
 header nav {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
     margin-top: 40px;
 }
 
 header nav ul li {
-    float: left;
+    display: inline-flex;
+    justify-content: center;
     font-size: 24px;
     font-weight: bold;
     color: #333;
@@ -116,8 +118,6 @@ div#firstview {
 }
 
 
-
-
 /* ========================================
     新商品
 ========================================= */
@@ -128,17 +128,19 @@ div#newitems {
 
 div#newitems h2 {
     margin: 80px 0 68px 93px;
-    float: left;
+    display: flex;
+    justify-content: flex-start;
 }
 
 div#newitems ul {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 div#newitems ul li {
     width: 390px;
     height: auto;
-    float: left;
+    justify-content: flex-end;
 }
 
 div#newitems ul li:last-child {
@@ -163,17 +165,19 @@ div#pickup {
 
 div#pickup h2 {
     margin: 0 106px 71px 0;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 div#pickup ul {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
 }
 
 div#pickup ul li {
     width: 387px;
     height: auto;
-    float: left;
+    justify-content: flex-start;
     margin: 0 102px 147px;
 }
 
@@ -315,7 +319,8 @@ footer ul {
 }
 
 footer ul li {
-    float: left;
+    display: flex;
+    justify-content: center;
     font-size: 24px;
     font-weight: bold;
 }
