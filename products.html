@@ -10,6 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        $('#hamburger').on('click',function(){
+        $('#hamburger').toggleClass("open");
+            $('#header-menu,#overlay').slideToggle();
+        });
+    });
+</script>       
 </head>
 
 <body>
@@ -18,21 +27,29 @@
     <div id="header_inner">
         <h1>queue de chat</h1>
 
-        <nav>
-            <ul class="cf">
-                <li><a href="#" class="current">Products</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Log In</a></li>
+        <nav id="header-nav">
+            <ul id="header-menu">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log In</a></li>
             </ul>
         </nav>
+        <div id="overlay"></div>
+        <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
 <!-- ヘッダーここまで -->
 
 
 <!-- 取扱商品 ここから -->
-<h2>Products</h2>
+<div id="products">
+    <h2>Products</h2>
+</div>
 <!-- お手入れ ここから-->
 <div id="grooming">
     <h3>- Grooming</h3>
