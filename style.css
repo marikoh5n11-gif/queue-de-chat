@@ -13,6 +13,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
     background-color: #405256;
+    height: 100%;
 }
 
 a {
@@ -27,6 +28,20 @@ h2{
     font-size: 80px;
     font-weight: bold;
     color: #fff;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #f9bc7f;
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 118px;
+    margin-bottom: 70px;
 }
 
 div#newitems dl dd.productname,
@@ -51,14 +66,71 @@ div#pickup ul li a.productlink {
     margin: 0 84px 130px;
 }
 
-
-/* micro clearfix */
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
+div#grooming dl dd.productname,
+div#Dining dl dd.productname,
+div#Scratchers dl dd.productname,
+div#Toy dl dd.productname,
+div#Portable dl dd.productname {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 26px;
+    margin-bottom: 20px;
+    line-height: 36px;
 }
-.cf:after {clear: both;}
+
+div#grooming dl dd.price,
+div#Dining dl dd.price,
+div#Scratchers dl dd.price,
+div#Toy dl dd.price,
+div#Portable dl dd.price {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+
+/* ========================================
+    パンくずリスト
+========================================= */
+.breadcrumb {
+    padding: 0 0.5rem;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 135px 118px;
+    padding: 0;
+    align-items: end;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.breadcrumb li a {
+    color: #fff;
+    text-decoration: underline;
+    margin-right: 24px;
+}
+
+.breadcrumb li span {
+    margin-left: 25px;
+}
+
+
+.breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 0.25rem;
+    content: ">";
+    font-size: 46px;
+    font-weight: bold;
+    color: #fff;
+}
 
 
 /* ========================================
@@ -81,28 +153,79 @@ header h1 {
     color: #333;
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 40px;
+nav#header-nav {
+    position: fixed;
+    top: 31px;
+    width: 100%;
+    z-index: 100;
 }
-
-header nav ul li {
-    display: inline-flex;
-    justify-content: center;
+nav#header-nav ul#header-menu {
+    /*最初はナビゲーションボタンは非表示*/
+    display: none;
+    list-style:none;
+}
+nav#header-nav ul#header-menu li a{
+    padding: 8px 20px;   
     font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    padding-left: 27px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
 }
 
-header nav ul li:last-child{
-    margin-right: 30px;
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    display: none; /* 初期状態では非表示 */
 }
-
-
-header nav ul li a {
-    color: #333;
+.hamburger {
+    position: absolute;
+    top: 31px;
+    right:30px;
+    cursor: pointer;
+    width: 84px;
+    height: 40px;
+    z-index: 30;
+}
+.hamburger span {
+    /*3本の線を作る*/
+    transition: all .3s;
+    position: absolute;
+    height: 2px;
+    background-color: #333;
+    width:100%;
+    z-index: 10;
+}
+.hamburger span:nth-of-type(1) {
+    /*上の線の位置*/
+    top: 0px;
+}
+.hamburger span:nth-of-type(2) {
+    /*真ん中の線の位置*/
+    top: 19px;
+}
+.hamburger span:nth-of-type(3) {
+    /*下の線の位置*/
+    top: 40px;
+}
+.hamburger.open span:nth-of-type(1) {
+    /*openのとき、上の線を右斜めにする*/
+    top: 10px;
+    transform: translateY(6px) rotate(-33deg);
+}
+.hamburger.open span:nth-of-type(2) {
+    /*真ん中の線を消す*/
+    opacity: 0;
+}
+.hamburger.open span:nth-of-type(3) {
+    /*下の線を左斜めにする*/
+    top: 22px;
+    transform: translateY(-6px) rotate(33deg);
 }
 
 
@@ -298,6 +421,160 @@ div#column ul li dl dd {
     font-weight: bold;
     line-height: 39px;
 }
+
+/* ========================================
+    プロダクトページ
+========================================= */
+div#products h2 {
+    margin: 79px 0 79px 118px;
+}
+
+h3 {
+    margin: 70px 0 15px 118px;
+}
+
+div#grooming ul, div#Dining ul, div#Scratchers ul, div#Toy ul, div#Portable ul {
+    display: flex;
+    justify-content: center;
+    gap: 49px;
+}
+
+/* ========================================
+    自社紹介
+========================================= */
+h2.about {
+    margin: 79px 0 70px 118px;
+}
+
+.detail {
+    display: flex;
+    justify-content: center;
+    gap: 39px;
+}
+div.side_image{
+    margin-left: 118px;
+    width: 100%;
+    height: 849px;
+}
+
+div.side_text {
+    margin-right: 119px;
+    width: 100%;
+}
+
+div.side_text p {
+    font-size: 32px;
+    font-weight: semi-bold;
+    line-height: 57px;
+    text-align: center;
+    line-break: strict;
+}
+
+div.side_text span {
+    color: #f9bc7f;
+}
+
+div.detail {
+    margin-bottom: 149px;
+}
+
+/* ========================================
+    ログインページ
+========================================= */
+div.login_form h2 {
+    margin: 79px 0 150px 118px;
+}
+
+h3.membership_registration {
+    margin: 0 0 45px 118px;
+}
+
+div.login_form p{
+    font-size: 34px;
+    font-weight: semi-bold;
+    line-height: 54px;
+    color: #fff;
+    text-align: left;
+    margin: 0 0 100px 118px;
+}
+
+div.login_form a {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 32px;
+    background-color: #f9bc7f;
+    border: 2px solid #fff;
+    padding: 26px 160px;
+    margin: 0 424px 102px 424px;
+}
+
+h3.membership_login {
+    margin: 0 0 45px 118px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_box_mail, .form_box_password {
+    background-color: #fff;
+    width: 835px;
+    height: 83px;
+    border: 2px solid #e0decf;
+}
+
+.form_box_mail {
+    margin: 100px 265px 51px 265px;
+}
+
+.form_box_password {
+    margin: 0 265px 100px 265px;
+}
+
+.form_box_mail input, .form_box_password input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: semi-bold;
+    padding: 31px 0 33px 27px;
+}
+
+.form_box_mail input::placeholder, .form_box_password input::placeholder {
+    color: #e0decf;
+}
+
+div.login_form button {
+    display: inline-block;
+    height: 100%;
+    width: 518px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f9bc7f;
+    border: 2px solid #fff;
+    padding: 25px 198px;
+    margin: 0 424px 100px 424px;
+    white-space: nowrap;
+}
+
+p.forgot_guide a{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 265px 85px 0;
+    text-decoration: underline;
+}
+
+
+
 
 /* ========================================
     フッター
