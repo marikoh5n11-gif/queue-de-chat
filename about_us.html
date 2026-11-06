@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>queue de chat</title>
+    <meta name="description" content="猫とあなたの暮らしを彩る。">
+    <meta name="keywords" content="猫、オンライン、ショップ、動物、ペット">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        $('#hamburger').on('click',function(){
+        $('#hamburger').toggleClass("open");
+            $('#header-menu,#overlay').slideToggle();
+        });
+    });
+</script>       
+</head>
+
+<body>
+<!-- ヘッダーここから -->
+<header>
+    <div id="header_inner">
+        <h1>queue de chat</h1>
+
+        <nav id="header-nav">
+            <ul id="header-menu">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+        <div id="overlay"></div>
+        <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+<!-- ヘッダーここまで -->
+
+
+<!-- 自社紹介 ここから -->
+<h2 class="about">About Us</h2>
+<div class="detail">
+    <div class="side_image"><img src="images/about_us.png" alt="About Us"></div>
+
+    <div class="side_text">
+    <p><span>“queue de chat”</span>とは、<br>
+    フランス語で<span>「猫のしっぽ」</span>
+    という意味です。<br>
+    猫たちはしっぽで様々な感情を表して
+    我々飼い主とコミュニケーションを取ってくれます。<br>
+    また、猫の曲がったしっぽは
+    <span>「幸運の扉を開く」</span>
+    というジンクスもあります。</p>
+
+    <p>お客様と愛猫の絆の象徴であるしっぽのように、
+    当店では商品やサービスなどを通じて、
+    お客様と愛猫の絆を大切にとり持つサポートを
+    させていただくという想いで運営してまいります。</p>
+    </div>
+
+</div>
+<!-- 自社紹介 ここまで -->
+
+<!-- パンくずリスト ここから-->
+<nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+        <li><a href="https://queue-de-chat.vercel.app/">Home</a></li>
+        <li><span aria-current="page">About Us</span></li>
+    </ol>
+</nav>
+<!-- パンくずリスト ここまで-->
+
+<!-- フッターここから -->
+<footer>
+        <ul>
+            <li><a href="#">当店について</a></li>
+            <li><a href="#">会員規約</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <p>copyright © 2024 queue de chat</p>
+</footer>
+<!-- フッターここまで -->
+</body>
+
+
+</html>
