@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>queue de chat</title>
+    <meta name="description" content="猫とあなたの暮らしを彩る。">
+    <meta name="keywords" content="猫、オンライン、ショップ、動物、ペット">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        $('#hamburger').on('click',function(){
+        $('#hamburger').toggleClass("open");
+            $('#header-menu,#overlay').slideToggle();
+        });
+    });
+</script>       
+</head>
+
+<body>
+<!-- ヘッダーここから -->
+<header>
+    <div id="header_inner">
+        <h1>queue de chat</h1>
+
+        <nav id="header-nav">
+            <ul id="header-menu">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+        <div id="overlay"></div>
+        <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+<!-- ヘッダーここまで -->
+
+
+<!-- ログイン ここから -->
+<div class="login_form">
+    <h2>Log In</h2>
+    <h3 class="membership_registration">はじめてご利用の方</h3>
+    <p>ご利用には会員登録が必要です。<br>
+    下記ボタンより会員登録へお進みください。</p>
+    <a href="#" class="register_button">新規会員登録</a>
+
+    <h3 class="membership_login">ログイン</h3>
+
+    <form action="login.php" method="post">
+        <div class="form_box_mail">
+            <input type="email" id="email" name="email" required placeholder="メールアドレス">
+        </div>
+
+        <div class="form_box_password">
+            <input type="password" id="password" name="password" required placeholder="パスワード">
+        </div>
+        <button type="submit">ログイン</button>
+    </form>
+</div>
+    <p class="forgot_guide"><a href="#">パスワードをお忘れの方はこちら</a></p>
+
+<!-- ログイン ここまで -->
+
+
+<!-- パンくずリスト ここから-->
+<nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+        <li><a href="https://queue-de-chat.vercel.app/">Home</a></li>
+        <li><span aria-current="page">About Us</span></li>
+    </ol>
+</nav>
+<!-- パンくずリスト ここまで-->
+
+<!-- フッターここから -->
+<footer>
+        <ul>
+            <li><a href="#">当店について</a></li>
+            <li><a href="#">会員規約</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <p>copyright © 2024 queue de chat</p>
+</footer>
+<!-- フッターここまで -->
+</body>
+
+
+</html>
