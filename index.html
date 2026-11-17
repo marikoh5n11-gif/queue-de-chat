@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>queue de chat</title>
     <meta name="description" content="猫とあなたの暮らしを彩る。">
@@ -17,6 +18,11 @@
         $('#hamburger').toggleClass("open");
             $('#header-menu,#overlay').slideToggle();
         });
+        // メニュー内のリンクを押したらメニューを閉じる
+        $('#header-menu a').on('click',function(){
+            $('#hamburger').removeClass("open");
+            $('#header-menu,#overlay').hide();
+        });
     });
 </script>       
 </head>
@@ -29,7 +35,7 @@
         <nav id="header-nav">
             <ul id="header-menu">
                 <li><a href="products.html">Products</a></li>
-                <li><a href="https://queue-de-chat.vercel.app/">Category</a></li>
+                <li><a href="index.html#category">Category</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="login.html">Log In</a></li>
             </ul>
